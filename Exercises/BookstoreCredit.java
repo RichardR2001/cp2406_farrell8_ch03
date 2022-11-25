@@ -9,6 +9,7 @@ public class BookstoreCredit
     public static void main (String[] args)
     {
         String name;
+        // grade will be set as double as it contains decimal
         double grade;
         Scanner input = new Scanner(System.in);
         System.out.print("Please enter your full name: ");
@@ -17,9 +18,11 @@ public class BookstoreCredit
         grade = input.nextDouble();
         calculateCredit(name, grade);
     }
-    public static void calculateCredit(String name, double grade)
+    public static void calculateCredit(String name, double grade)       // this function will display the amount
+                                                                        // of credits available for the student
     {
         double credit;
+        // FACTOR is used since it is a constant
         final double FACTOR = 10;
         credit = grade * FACTOR;
         System.out.println("Good day, " + name + ". Your Grade Point Average (GPA) is " + grade + " and the " +
